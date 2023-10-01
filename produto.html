@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" type="text/css" href="index.html">
+    <link rel="stylesheet" type="text/css" href="lancamento.html">
+    <link rel="stylesheet" type="text/css" href="html/css/estilo.css">
+   
+    <title>Página do Produto</title>
+ 
+</head>
+    <style type="text/css">
+        html{overflow-x: hidden;}
+       
+        .img {
+      max-width: 30vw;
+      height: 30vh;
+      margin-right: 20px;
+       
+    }
+
+  </style>
+        <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+          }
+        
+          .footer {
+            background-color: #BD7C3A;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        
+          .footer-logo {
+            display: flex;
+            align-items: center;
+          }
+        
+          .footer-logo img {
+            width: 180;
+            height: 180px;
+            margin-right: 10px;
+          }
+        
+          .footer-column {
+            flex: 1;
+            margin-right: 20px;
+          }
+        
+          .footer-column:last-child {
+            margin-right: 0;
+          }
+        
+          .footer-heading {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+          }
+        
+          .footer-content {
+            line-height: 1.6;
+          }  </style>
+       
+     <style>
+  
+    .product {
+        display: flex;
+        align-items: center;
+        max-width: 800px;
+        
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    .product img {
+       margin-top: 20px;
+       border-radius: 20px; 
+       max-width: 250px;
+        max-height: 600px;
+    }
+    
+    .product-details {
+        margin-left: 70px;
+    }
+    
+    .product-details h2 {
+        margin: 0 0 10px; /*distnacia do nome para baixo */
+        font-size: 1.5em;
+    }
+    
+    .product-details p {
+        margin: 0;
+        font-size: 1em;
+    }
+    
+    .quantity {
+        margin-top: 10px;
+    }
+    
+    .quantity-btn {
+        font-size: 1em;
+        padding: 5px 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .quantity-btn:focus {
+        outline: none;
+    }
+    
+    #quantity {
+        width: 40px;
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .add-to-cart {
+        margin-top: 10px;
+        font-size: 1em;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    
+    .add-to-cart:focus {
+        outline: none;
+    }
+   .product{
+    margin-bottom: 150px;
+    margin-top: 150px;
+   margin-left: 700px;
+    transform: scale(2.0);
+   } 
+
+   h2{font-size:20px;}
+</style>
+       
+<header>
+            <div class="logo">
+                <img src="html/css/imagens/logo.png" alt="Logo ArchiStyle">
+            </div>
+            <h1>ArchiStyle</h1>
+            <div class="buttonLog">
+              <h3><a href="login.html">Login</a></h3></div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="lancamento.html">lançamento</a></li>
+                <li><a href="lancamento.html">Novidades</a></li>
+                <li><a href="lancamento.html">Cozinha</a></li>
+                <li><a href="lancamento.html">Sala</a></li>
+                <li><a href="lancamento.html">Estofados</a></li>
+                <li><a href="lancamento.html">Móveis</a></li>
+            </ul>
+        </nav>
+
+
+        <body>
+            <div class="product">
+                <img src="html/css/imagens/pexels-maksim-goncharenok-4352247.jpg" alt="Produto" width="400px"height="300px">
+                <div class="product-details">
+                    <div class="escala2">
+                    <h2>Sófa Branco Camursa</h2>
+                    <p>Cor: Branco</p>
+                    <p>Número: #45252</p></div>
+                    <p>Preço: R$1149,99</p>
+                    <div class="quantity">
+                        <button class="quantity-btn" onclick="decrementQuantity()">-</button>
+                        <input type="text" id="quantity" value="1">
+                        <button class="quantity-btn" onclick="incrementQuantity()">+</button>
+                    </div>
+                  <div class="escala3"><button class="add-to-cart"><a href="compra.html">Adicionar ao Carrinho</a></button></div>
+                </div>
+            </div>
+        </body>
+       
+        <div class="posicao">
+            <div class="escala">
+            <div class="cep-input">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" placeholder="Digite o CEP">
+                <button class="cep-submit" onclick="submitCep()">OK</button>
+            </div></div></div>
+            
+        <section class="text-section">
+            <div class="styled-text">
+                <h2>Sobre o Produto</h2>
+                <p>Com desenho linear, revestimentos de alta qualidade e o uso da madeira, o sofá Law é uma ótima<br> escolha para quem busca conforto na hora de reunir os amigos e familiares para um agradável bate papo ou uma sessão de filmes e séries na sala de estar e home cinema. Seu assento estofado, bem como as almofadas soltas proporcionam ainda mais comodidade.<br> Além disso, acompanha o pufe que garante ainda mais conforto no momento de relax.<br> *Importante: Produto de grandes dimensões; verifique as larguras das portas e passagens, bem como o tamanho do elevador.<br> A Tok&Stok transporta somente até o 5º andar pela escada. Em casos de andares mais altos ou escadas pelas quais o produto não passa, sugerimos contratar um serviço de içamento (não oferecido pela Tok&Stok).</p>
+            </div>
+            <div class="small-text">
+                <h2>Informações técnicas</h2>
+                <p>Altura aberto
+
+                    90.00CM<br>
+                    <br>
+                    Altura fechado
+                    
+                    48.00CM<br>
+                    <br>
+                    Largura aberto
+                    
+                    208.00CM<br>
+                    <br>
+                    Largura fechado
+                    
+                    84.00CM.</p>
+            </div>
+        </section>   
+ 
+    <section>
+    <div class="imgg">
+        <div class="img-container">
+    <div class="product-cart">
+        <img src="html/css/imagens/sofabranco.jpg" class="cart-img"alt="Produto"width="300" height="300">
+        <div class="escala2">
+        <h2>Sofa Branco</h2>
+        <p>Descrição do Produto.</p>
+        <p>Preço: R$50,00</p></div>
+        <button class="buy-button">Adicionar ao Carrinho</button>
+  
+    </div>
+    <div class="product-cart">
+        <img src="html/css/imagens/sofaazul.jpg" class="cart-img"alt="Produto"width="300" height="300">
+        <div class="escala2">
+        <h2>Sofa azul</h2>
+        <p>Descrição do Produto.</p>
+        <p>Preço: R$50,00</p></div>
+        <button class="buy-button">Adicionar ao Carrinho</button>
+  
+    </div>
+    <div class="product-cart">
+        <img src="html/css/imagens/sofá-amarelo-0.webp" class="cart-img"alt="Produto"width="300" height="300">
+        <div class="escala2">
+        <h2>Sofa amarelo</h2>
+        <p>Descrição do Produto.</p>
+        <p>Preço: R$50,00</p></div>
+        <button class="buy-button">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product-cart">
+        <img src="html/css/imagens/sofavermelho.webp" class="cart-img"alt="Produto"width="300" height="300">
+        <div class="escala2">
+        <h2>Sofa vermelho</h2>
+        <p>Descrição do Produto.</p>
+        <p>Preço: R$50,00</p></div>
+        <button class="buy-button">Adicionar ao Carrinho</button>
+    </div>
+
+</div></div>
+
+<div class="imgg">
+    <div class="img-container">
+<div class="product-cart">
+    <img src="html/css/imagens/mesademadeira.jpg" class="cart-img"alt="Produto" width="300" height="300">
+    <div class="escala2">
+    <h2>Mesa de Madeira</h2>
+    <p>Descrição do Produto.</p>
+    <p>Preço: R$50,00</p></div>
+    <button class="buy-button">Adicionar ao Carrinho</button>
+</div>
+<div class="product-cart">
+    <img src="html/css/imagens/cadeiramadeira.jpg" class="cart-img"alt="Produto" width="300" height="300">
+    <div class="escala2">
+    <h2>Cadeira de madeira</h2>
+    <p>Descrição do Produto.</p>
+    <p>Preço: R$50,00</p></div>
+    <button class="buy-button">Adicionar ao Carrinho</button>
+</div>
+<div class="product-cart">
+    <img src="html/css/imagens/enfeite.jpg" class="cart-img"alt="Produto"width="300" height="300">
+    <div class="escala2">
+    <h2>Enfeite de mesa</h2>
+    <p>Descrição do Produto.</p>
+    <p>Preço: R$50,00</p></div>
+    <button class="buy-button">Adicionar ao Carrinho</button>
+</div>
+<div class="product-cart">
+    <img src="html/css/imagens/manta.jpg" class="cart-img"alt="Produto"width="300" height="300">
+    <div class="escala2">
+    <h2>Manta de coberta</h2>
+    <p>Descrição do Produto.</p>
+    <p>Preço: R$50,00</p></div>
+    <button class="buy-button">Adicionar ao Carrinho</button>
+
+</div>
+</div></div>    
+
+</main>
+          
+ 
+
+<footer>
+    <div class="footer">
+      <div class="footer-logo">
+        <img src="html/css/imagens/logo.png" alt="Logo">
+        
+      </div>
+    <div class="footer-column">
+      <div class="footer-heading">Atendimento</div>
+      <div class="footer-content">
+        <p>Sac:0800-500-1000</p>
+          <p>horario de atendimento:</p>
+         <p>De segunda á sexta das 9:00 ate as 18:00
+          </p>
+      </div>
+    </div>
+    <div class="footer-column">
+      <div class="footer-heading">Contato</div>
+      <div class="footer-content">
+        <p>Endereço: Rua José Peres, 100</p>
+        <p>Telefone: (11) 4002-8922</p>
+        <p>Email: archistyle@hotmail.com</p>
+      </div>
+    </div>
+    <div class="footer-column">
+      <div class="footer-heading">Redes Sociais</div>
+      <div class="footer-content">
+        <p>Facebook</p>
+        <p>Twitter</p>
+        <p>Instagram</p>
+      </div>
+    </div>
+  
+  </footer>
+</html>
